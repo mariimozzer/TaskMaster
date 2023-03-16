@@ -25,8 +25,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".ViewTasks" />
-        <activity android:name=".AddTasks" />
+        <activity android:name=".CreateTaskActivity" />
     </application>
 
 </manifest>

@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    <TextView
+        android:text="Create New Task"
+        android:textSize="24sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Task"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"/>
+    <EditText
+        android:id="@+id/nameEditText"
+        android:hint="Task Name"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
 
-        <EditText
-            android:id="@+id/editTextTaskName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Task name"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp"/>
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:hint="Task Description"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
 
-        <EditText
-            android:id="@+id/editTextTaskDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Task description"
-            android:padding="8dp"
-            android:layout_marginBottom="8dp"/>
+    <EditText
+        android:id="@+id/dueDateEditText"
+        android:hint="Due Date (yyyy-mm-dd)"
+        android:inputType="date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
 
-        <Button
-            android:id="@+id/buttonSaveTask"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="16dp"/>
+    <EditText
+        android:id="@+id/priorityEditText"
+        android:hint="Priority (1-10)"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
 
-    </LinearLayout>
+    <EditText
+        android:id="@+id/notesEditText"
+        android:hint="Notes (optional)"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/createButton"
+        android:text="Create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
