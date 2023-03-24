@@ -92,6 +92,31 @@ public class TaskDatabaseHelper extends SQLiteOpenHelper{
         return tasks;
     }
 
+    public TaskModel getTaskById(int taskId) {
+        TaskModel task = null;
+
+        String selectQuery = "SELECT * FROM " + TABLE_NAME + " WHERE id = " + taskId;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            task = new TaskModel();
+            task.setId(Integer.parseInt(cursor.getString(0)));
+            task.setName(cursor.getString(1));
+            task.setDescription(cursor.getString(2));
+            task.setDueDate(cursor.getString(3));
+            task.setPriority(Integer.parseInt(cursor.getString(4)));
+            task.setNotes(cursor.getString(5));
+        }
+
+        cursor.close();
+        db.close();
+
+        return task;
+    }
+
+
     public void updateTask(TaskModel task) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
