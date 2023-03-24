@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class EditTaskActivity extends AppCompatActivity {
@@ -16,31 +17,38 @@ public class EditTaskActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_tasks);
+        setContentView(R.layout.edit_tasks);
 
-        /*editName = findViewById(R.id.editName);
+        editName = findViewById(R.id.editName);
         editDescription = findViewById(R.id.editDescription);
         editDate = findViewById(R.id.editDate);
         editPriority = findViewById(R.id.editPriority);
         editNotes = findViewById(R.id.editNotes);
-        btnEdit = findViewById(R.id.btnEdit);*/
+        btnEdit = findViewById(R.id.btnEdit);
 
         dbHelper = new TaskDatabaseHelper(this);
 
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createTask();
+                editTasks();
             }
         });
     }
 
-    private void createTask() {
-        /*String name = nameEditText.getText().toString().trim();
-        String description = descriptionEditText.getText().toString().trim();
-        String dueDate = dueDateEditText.getText().toString().trim();
-        int priority = Integer.parseInt(priorityEditText.getText().toString().trim());
-        String notes = notesEditText.getText().toString().trim();
+    private void editTasks() {
+
+
+
+
+
+
+
+        String name = editName.getText().toString().trim();
+        String description = editDescription.getText().toString().trim();
+        String dueDate = editDate.getText().toString().trim();
+        int priority = Integer.parseInt(editPriority.getText().toString().trim());
+        String notes = editNotes.getText().toString().trim();
 
         TaskModel task = new TaskModel();
         task.setName(name);
@@ -51,8 +59,8 @@ public class EditTaskActivity extends AppCompatActivity {
 
         dbHelper.addTask(task);
 
-        Toast.makeText(this, "Task created successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Task edited successfully", Toast.LENGTH_SHORT).show();
 
-        finish();*/
+        finish();
     }
 }

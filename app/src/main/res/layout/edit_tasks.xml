@@ -6,7 +6,7 @@
     android:padding="16dp">
 
     <TextView
-        android:text="Edit New Task"
+        android:text="Edit Task"
         android:textSize="24sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
