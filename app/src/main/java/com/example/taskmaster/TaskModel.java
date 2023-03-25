@@ -4,9 +4,12 @@
  *
  * Project Revision:
  *      Guilherme Medes Cunha Bueno, 2023.03.16: Created
+ *
  */
 
 package com.example.taskmaster;
+
+import java.util.Date;
 
 public class TaskModel {
     private int id;

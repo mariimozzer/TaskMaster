@@ -26,6 +26,7 @@
                 android:value="" />
         </activity>
         <activity android:name=".CreateTaskActivity" />
+        <activity android:name=".ViewTaskActivity" />
     </application>
 
 </manifest>

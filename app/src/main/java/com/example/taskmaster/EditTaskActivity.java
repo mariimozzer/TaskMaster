@@ -1,3 +1,12 @@
+/*
+ * File Name: EditTasksActivity.java
+ * Description: Create Edit Task and Components
+ *
+ * Project Revision:
+ *      Mariana Mozzer Arantes, 2023.03.24: Created
+ */
+
+
 package com.example.taskmaster;
 
 import android.os.Bundle;
@@ -5,7 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
